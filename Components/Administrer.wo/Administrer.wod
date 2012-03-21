@@ -1,0 +1,31 @@
+Wrapper : Wrapper {
+	onloadJS = onloadJS;
+}
+ExceptionModalDialog: CktlAjaxModalDialog {
+	id = "ExceptionModalDialog";
+	pageName = "Erreur";
+	title = "Une erreur inattendue est survenue";
+	minWidth = 500;
+	resizable = true;
+	minimizable = false;
+	closable = false;
+	maximizable = false;
+	draggable = true;
+	centerVertically = true;
+	open = isOpenFenetreException;
+	showOpener = false;
+}
+
+PubAdministration : PubAdministration {
+	appUser = session.applicationUser;
+	rapportsDg = rapportsDg;
+	//rapportsPretsDg = rapportsPretsDg;
+}
+ 
+WOForm1 : ERXWOForm {
+	id = formId;
+	action = doNothing;
+	multipleSubmit = true;
+	enctype = "multipart/form-data";
+}
+

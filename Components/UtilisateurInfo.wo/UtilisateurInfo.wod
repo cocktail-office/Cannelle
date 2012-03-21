@@ -1,0 +1,24 @@
+SUtilisateurConnecte : WOString {
+	value = session.applicationUser.individu.nomPrenomAffichage; //VALID
+}
+RepServices : WORepetition {
+	list = getServices;
+	item = unService;
+}
+
+SUnService : WOString {
+	value = unService.llStructure;
+}
+
+IsSuperAdmin : WOConditional {
+	condition = isSuperAdmin;
+}
+
+SUnEtab : WOString {
+	value = unEtablissement.llStructure;
+}
+
+RepEtablissements : WORepetition {
+	list = getEtablissements;
+	item = unEtablissement;
+}

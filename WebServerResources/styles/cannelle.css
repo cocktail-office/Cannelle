@@ -1,0 +1,204 @@
+/* --------------------------------------------------------------------------- */
+table {
+	font-size: 12px;
+}
+body {
+	font-size: 11px;
+}
+input, textarea {
+	font-size: 11px;
+}
+
+/* Classes du wrapper horizontal */
+.cktl_container_principal {
+	width: 98%;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	text-align: center;
+	font-size: 12px;
+	float: inherit;
+}
+
+.cktl_entete_wrapper_horizontal { /*width: 98%;*/
+	height: 30px;
+	position: relative;
+	text-align: left;
+	font-size: 2em;
+	display: block;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.cktl_copyright_wrapper_horizontal { /*width: 98%;*/
+	height: 15px;
+	position: relative;
+	font-size: 8pt;
+	display: block;
+	font-weight: bold;
+}
+
+.cktl_copyright_wrapper_horizontal a {
+	text-decoration: none;
+}
+
+.cktl_accueil_wrapper_horizontal { /*width: 98%;*/
+	text-align: center;
+	margin: 0;
+	font-size: 12px;
+}
+
+.sousTitrePrincipal {
+	font-style: italic;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 10px;
+	vertical-align: bottom;
+	width: 100%;
+}
+
+#CannelleMenu {
+	height: 32px;
+	background-color: #C26919;
+	position: relative;
+	text-align: left;
+	vertical-align : text-bottom;
+	font-size: 12px;
+	display: block;
+	font-weight: bold;
+	padding-left: 4px;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 0px;
+}
+
+#CannelleMenu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	vertical-align: bottom;
+}
+
+#CannelleMenu ul li {
+	width: 150px;
+	float: left;
+	text-align: center;
+	padding-top : 2px;
+	z-index: auto !important /*Non-IE6*/;
+	z-index: 1000 /*IE6*/;
+	
+}
+
+#CannelleMenu ul li a {
+	height: 25px;
+	text-decoration: none;
+	float: none !important /*Non-IE6*/;
+	float: left /*IE-6*/;
+	display: block;
+	background-color: #D89458;
+	margin-bottom: 0px;
+	
+}
+
+#CannelleMenu ul li a:hover {
+	color: #ffffff;
+	background-color: #9D520F;
+}
+
+
+.CannelleRapportItemRow {
+	
+}
+
+
+
+
+/*
+#menuPrincipal {
+	width: 200px;
+	padding: 0px;
+	margin-top: 50px;
+}
+
+#menuPrincipal ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#menuPrincipal li a {
+	height: 32px;
+	height: 24px;
+	text-decoration: none;
+}
+
+#menuPrincipal li a:link,#menuPrincipal li a:visited {
+	color: #dcd191;
+	display: block;
+	padding: 8px 0 0 30px;
+}
+
+#menuPrincipal li a:hover {
+	color: #ffffff;
+	padding: 8px 0 0 30px;
+	background-color: #b1bf82;
+}
+
+#menuPrincipal li a:active {
+	color: #dcd191;
+	background-color: #80C65A;
+	padding: 8px 0 0 30px;
+}
+*/
+.connectedUserInfo {
+	border: solid 1px #b1bf82;
+	width: 99%;
+	text-align: center;
+}
+
+.connectedUserInfoTitre {
+	background-color: #b1bf82;
+	font-weight: bold;
+	padding: 2px;
+	color: #f9f5ec;
+}
+
+.connectedUserInfoContenu {
+	color: #f9f5ec;
+	padding: 5px;
+}
+
+.cktlajaxtableview>div.cktlAjaxTableView_DivHeaderAndBody table {
+	font-size: 12px;
+}
+
+/* --------------------------------------------------------------------------- */
+/* Wrapper horizontal bleu */
+/*
+.cktl_container_principal {
+  border: 2px solid #4E80C0;
+}
+
+.cktl_entete_wrapper_horizontal {
+  background-color: #6699CC;
+}
+
+.cktl_copyright_wrapper_horizontal {
+  background-color: #6699CC;
+}
+*/
+/* --------------------------------------------------------------------------- */
+/* Wrapper horizontal vert */
+/*
+.cktl_container_principal {
+  border: 2px solid #4AA329;
+}
+
+.cktl_entete_wrapper_horizontal {
+  background-color: #B1BF82;
+}
+
+.cktl_copyright_wrapper_horizontal {
+  background-color: #B1BF82;
+}
+*/

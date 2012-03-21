@@ -1,0 +1,82 @@
+Wrapper : Wrapper {
+	onloadJS = onloadJS;
+}
+
+IndicateurBusy : WOImage {
+	border = 0;
+	framework = "FwkCktlThemes";
+	filename = "images/ajax-loader_gris.gif";
+	style = "display:none;vertical-align:top;";
+	id = "busyLocal";
+	// width = "16px";
+	// height = "16px";
+}
+IndicateurBusy1 : WOImage {
+	border = 0;
+	framework = "FwkCktlThemes";
+	filename = "images/ajax-loader_gris.gif";
+	style = "display:none;vertical-align:top;";
+	id = "busyLocal1";
+	width = "16px";
+	height = "16px";
+}
+
+Creer : WOHyperlink {
+	action = ctrl.creer;
+	onclick = "$('busyLocal').show();";
+	disabled = isCreerDisabled;
+}
+
+FormRechercher : WOForm {
+	id = "FormRechercher";
+	action = ctrl.rechercherParNumero;
+}
+
+Numero : WOTextField {
+  value = numero;
+  size = "4";
+  numberformat = "#0";
+  style = "text-align:center;";
+}
+
+RechercherParNumero : WOImageButton {
+	action = ctrl.rechercherParNumero;
+	// type = "find";
+	framework = "FwkCktlThemes";
+	filename = "images/16x16/001_38_16x16.png";
+	style = "border:none;vertical-align:bottom;height:16px;width:16px;";
+	title = "Rechercher par son numéro";
+	onClick = "$('busyLocal1').show();";
+}
+
+RechercheAvancee : WOHyperlink {
+	action = rechercheAvancee;
+}
+
+ExceptionModalDialog: CktlAjaxModalDialog {
+	id = "ExceptionModalDialog";
+	pageName = "Erreur";
+	title = "Une erreur inattendue est survenue";
+	minWidth = 500;
+	resizable = true;
+	minimizable = false;
+	closable = false;
+	maximizable = false;
+	draggable = true;
+	centerVertically = true;
+	open = isOpenFenetreException;
+	showOpener = false;
+}
+
+ 
+WOForm1 : WOForm {
+	action = doNothing;
+	multipleSubmit = true;
+}
+
+PubRapportSelectAndExec : PubRapportSelectAndExec {
+	appUser = session.applicationUser;
+	rapportsDg = rapportsDg;
+	rapportsPretsDg = rapportsPretsDg;
+	refreshData = refreshData;
+}

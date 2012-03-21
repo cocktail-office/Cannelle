@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="CannelleOrganisationModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="CannelleOrganisationPackage">
+    <packagedElement xmi:type="uml:Component" xmi:id="idComponent" name="CannelleOrganisationComponent">
+      <ownedComment xmi:id="_tkfQMDpxEeCdpOzrYXhpLA" annotatedElement="_qJY3wDpwEeCdpOzrYXhpLA">
+        <body>Implemente le metier de CKTL_REPORT (stockage des rapports, categories, etc.)
+</body>
+      </ownedComment>
+      <ownedComment xmi:id="_C5HrcDpyEeCdpOzrYXhpLA" annotatedElement="_1k5RwDpwEeCdpOzrYXhpLA">
+        <body>Composants d'interfaces pour l'execution jasper, jxls, etc.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_KBFMoDpyEeCdpOzrYXhpLA" annotatedElement="_3v80EDpwEeCdpOzrYXhpLA">
+        <body>Moteur d'execution pour Jasper, jxls, etc.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_NsK-UDpyEeCdpOzrYXhpLA" annotatedElement="_t8eu4DpwEeCdpOzrYXhpLA">
+        <body>Composants d'interfaces pour l'exploitation des rapports (execution, planification etc.)
+</body>
+      </ownedComment>
+      <ownedComment xmi:id="_b4XXQDpyEeCdpOzrYXhpLA" annotatedElement="_Y0-7QDpxEeCdpOzrYXhpLA">
+        <body>Organise les composants de FwkCktlReportGuiAjax</body>
+      </ownedComment>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_qJY3wDpwEeCdpOzrYXhpLA" name="FwkCktlReport" clientDependency="_esm18DpxEeCdpOzrYXhpLA">
+        <realization xmi:id="_esm18DpxEeCdpOzrYXhpLA" name="ComponentRealization1" supplier="_t8eu4DpwEeCdpOzrYXhpLA" client="_qJY3wDpwEeCdpOzrYXhpLA" realizingClassifier="_t8eu4DpwEeCdpOzrYXhpLA"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_t8eu4DpwEeCdpOzrYXhpLA" name="FwkCktlReportGuiAjax" clientDependency="_b85ucDpxEeCdpOzrYXhpLA">
+        <realization xmi:id="_b85ucDpxEeCdpOzrYXhpLA" name="ComponentRealization1" supplier="_Y0-7QDpxEeCdpOzrYXhpLA" client="_t8eu4DpwEeCdpOzrYXhpLA" realizingClassifier="_Y0-7QDpxEeCdpOzrYXhpLA"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_1k5RwDpwEeCdpOzrYXhpLA" name="FwkCktlReportingGuiAjax" clientDependency="_fR2RADpxEeCdpOzrYXhpLA">
+        <realization xmi:id="_fR2RADpxEeCdpOzrYXhpLA" name="ComponentRealization1" supplier="_t8eu4DpwEeCdpOzrYXhpLA" client="_1k5RwDpwEeCdpOzrYXhpLA" realizingClassifier="_t8eu4DpwEeCdpOzrYXhpLA"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_3v80EDpwEeCdpOzrYXhpLA" name="FwkCktlReporting" clientDependency="_gEM7ADpxEeCdpOzrYXhpLA">
+        <realization xmi:id="_gEM7ADpxEeCdpOzrYXhpLA" name="ComponentRealization1" supplier="_1k5RwDpwEeCdpOzrYXhpLA" client="_3v80EDpwEeCdpOzrYXhpLA" realizingClassifier="_1k5RwDpwEeCdpOzrYXhpLA"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_Y0-7QDpxEeCdpOzrYXhpLA" name="Cannelle"/>
+      <packagedElement xmi:type="uml:Model" xmi:id="_sH_dADpxEeCdpOzrYXhpLA" name="Package1"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

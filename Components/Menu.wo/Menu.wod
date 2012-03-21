@@ -1,0 +1,15 @@
+
+LinkRapports : WOHyperlink {
+	action = onRapports;	
+}
+
+LinkAbonnements : WOHyperlink {
+	action = onAbonnements;	
+}
+LinkAdministration : WOHyperlink {
+	action = onAdministration;	
+}
+LinkQuitter : WOHyperlink {
+	action = onQuitter;	
+}
+
