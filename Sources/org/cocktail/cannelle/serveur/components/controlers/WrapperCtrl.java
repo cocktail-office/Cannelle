@@ -25,7 +25,6 @@
 package org.cocktail.cannelle.serveur.components.controlers;
 
 import org.cocktail.cannelle.serveur.components.Accueil;
-import org.cocktail.cannelle.serveur.components.Administrer;
 import org.cocktail.cannelle.serveur.components.Wrapper;
 
 import com.webobjects.appserver.WOActionResults;
@@ -48,14 +47,6 @@ public class WrapperCtrl extends Object {
 
 	public WOActionResults quitter() {
 		return wocomponent.session().onQuitter();
-	}
-
-	public WOActionResults administrer() {
-		return wocomponent.pageWithName(Administrer.class.getName());
-	}
-
-	public WOActionResults consulter() {
-		return wocomponent.pageWithName(Accueil.class.getName());
 	}
 
 }

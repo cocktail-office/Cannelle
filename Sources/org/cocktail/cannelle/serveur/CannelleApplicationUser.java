@@ -28,8 +28,6 @@ import java.util.Map;
 
 import org.cocktail.fwkcktlreport.server.FwkCktlReportApplicationUser;
 
-import com.webobjects.eocontrol.EOEditingContext;
-
 import er.extensions.eof.ERXEC;
 
 /**
@@ -38,9 +36,9 @@ import er.extensions.eof.ERXEC;
 
 public class CannelleApplicationUser extends FwkCktlReportApplicationUser {
 
-	public CannelleApplicationUser(EOEditingContext ec, Integer persId, Map<String, Object> params) throws Exception {
-		super(ec, persId, params);
-	}
+	//	public CannelleApplicationUser(EOEditingContext ec, Integer persId, Map<String, Object> params) throws Exception {
+	//		super(ec, persId, params);
+	//	}
 
 	public CannelleApplicationUser(ERXEC edc, String typeAppStr, Integer persId, Map<String, Object> params) throws Exception {
 		super(edc, typeAppStr, persId, params);

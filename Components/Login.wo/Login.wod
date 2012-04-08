@@ -30,3 +30,6 @@ Valider : WOSubmitButton {
 	value = "Se connecter";
 	directActionName = "validerLogin";
 }
+Wrapper : Wrapper {
+
+}

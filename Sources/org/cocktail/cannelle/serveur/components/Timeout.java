@@ -40,19 +40,6 @@ public class Timeout extends MyWOComponent {
 	public void appendToResponse(WOResponse response, WOContext context) {
 		super.appendToResponse(response, context);
 		CannelleHelpers.insertStylesSheet(context, response);
-
-		//		CktlAjaxUtils.addScriptResourceInHead(context, response, "prototype.js");
-		//		CktlAjaxUtils.addScriptResourceInHead(context, response, "effects.js");
-		//		CktlAjaxUtils.addScriptResourceInHead(context, response, "wonder.js");
-		//		CktlAjaxUtils.addScriptResourceInHead(context, response, "FwkCktlThemes.framework", "scripts/window.js");
-		//		
-		//		AjaxUtils.addScriptResourceInHead(context, response, "prototype.js");
-		//		AjaxUtils.addScriptResourceInHead(context, response, "effects.js");
-		//		AjaxUtils.addScriptResourceInHead(context, response, "wonder.js");
-		//		AjaxUtils.addScriptResourceInHead(context, response, "FwkCktlAjaxWebExt.framework", "scripts/window.js");
-		//		CktlAjaxUtils.addStylesheetResourceInHead(context, response, "FwkCktlAjaxWebExt.framework", "themes/default.css");
-		//		CktlAjaxUtils.addStylesheetResourceInHead(context, response, "FwkCktlAjaxWebExt.framework", "themes/alert.css");
-		//		CktlAjaxUtils.addStylesheetResourceInHead(context, response, "FwkCktlAjaxWebExt.framework", "themes/lighting.css");
 	}
 
 	public boolean isStateless() {

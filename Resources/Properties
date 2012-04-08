@@ -1,3 +1,23 @@
 wolips.password=mon_password
 wolips.host=localhost
 wolips.port=9485
+
+
+# Wonder Configuration
+er.extensions.ERXLocalizer.defaultLanguage=French
+er.extensions.ERXLocalizer.fileNamesToWatch=("Messages.strings", "ValidationTemplate.strings")
+er.extensions.ERXApplication.useEditingContextUnlocker=true
+er.extensions.ERXEC.defaultAutomaticLockUnlock=true
+er.extensions.ERXApplication.responseCompressionEnabled=true
+er.extensions.ERXJDBCAdaptor.className=er.extensions.jdbc.ERXJDBCAdaptor
+er.extensions.maxPageReplacementCacheSize=60
+
+er.extensions.WOConditional.patch=true
+er.extensions.loadOnDemandDuringReplace=true
+
+er.extensions.ERXEC.safeLocking=true
+
+#Parametres cocktail
+org.cocktail.fwkcktlreport.historique.nbjours=30
+
+#er.component.clickToOpen=true

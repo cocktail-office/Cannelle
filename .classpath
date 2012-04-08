@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="Sources"/>
-	<classpathentry kind="con" path="WOFramework/ERExtensions"/>
-	<classpathentry kind="con" path="WOFramework/ERJars"/>
-	<classpathentry kind="con" path="WOFramework/JavaFoundation"/>
-	<classpathentry kind="con" path="WOFramework/JavaWOExtensions"/>
-	<classpathentry kind="con" path="WOFramework/Ajax"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlWebApp"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlAjaxWebExt"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlDroitsUtils"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlPersonne"/>
-	<classpathentry kind="con" path="WOFramework/JavaEOAccess"/>
-	<classpathentry kind="con" path="WOFramework/JavaEOControl"/>
-	<classpathentry kind="con" path="WOFramework/JavaJDBCAdaptor"/>
-	<classpathentry kind="con" path="WOFramework/JavaWebObjects"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlThemes"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="WOFramework/WOLips"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlReport"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlReporting"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlReportGuiAjax"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlGFCGuiAjax"/>
-	<classpathentry kind="con" path="WOFramework/FwkCktlJefyAdmin"/>
 	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/commons-beanutils-1.8.3.jar"/>
 	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/commons-jexl-2.0.1.jar"/>
@@ -30,8 +9,29 @@
 	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/jxls-core-1.0-RC-1.jar"/>
 	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/poi-3.7-20101029.jar"/>
 	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/iText-2.1.7.jar"/>
+	<classpathentry kind="con" path="WOFramework/ERExtensions"/>
+	<classpathentry kind="con" path="WOFramework/ERJars"/>
+	<classpathentry kind="con" path="WOFramework/Ajax"/>
+	<classpathentry kind="con" path="WOFramework/WOLips"/>
+	<classpathentry kind="con" path="WOFramework/JavaWOExtensions"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlThemes"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlWebApp"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlAjaxWebExt"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlDroitsUtils"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlPersonne"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlReport"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlReporting"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlReportGuiAjax"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlGFCGuiAjax"/>
+	<classpathentry kind="con" path="WOFramework/FwkCktlJefyAdmin"/>
 	<classpathentry kind="con" path="WOFramework/FwkCktlPersonneGuiAjax"/>
 	<classpathentry kind="con" path="WOFramework/FwkCktlReportingGuiAjax"/>
-	<classpathentry kind="lib" path="/FwkCktlReporting/Libraries/iText-2.1.7.jar"/>
+	<classpathentry kind="con" path="WOFramework/JavaFoundation"/>
+	<classpathentry kind="con" path="WOFramework/JavaEOAccess"/>
+	<classpathentry kind="con" path="WOFramework/JavaEOControl"/>
+	<classpathentry kind="con" path="WOFramework/JavaJDBCAdaptor"/>
+	<classpathentry kind="con" path="WOFramework/JavaWebObjects"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

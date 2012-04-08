@@ -25,6 +25,9 @@
 package org.cocktail.cannelle.serveur;
 
 import org.cocktail.fwkcktlajaxwebext.serveur.CocktailAjaxSession;
+import org.cocktail.fwkcktlreport.server.CktlReportHistoryManagement;
+import org.cocktail.fwkcktlreport.server.FwkCktlReport;
+import org.cocktail.fwkcktlreport.server.FwkCktlReportApplicationUser;
 import org.cocktail.fwkcktlwebapp.common.util.StringCtrl;
 
 import com.webobjects.appserver.WOActionResults;
@@ -34,6 +37,8 @@ import com.webobjects.foundation.NSDictionary;
 import com.webobjects.foundation.NSNotification;
 import com.webobjects.foundation.NSNotificationCenter;
 import com.webobjects.foundation.NSSelector;
+
+import er.extensions.foundation.ERXThreadStorage;
 
 public class Session extends CocktailAjaxSession {
 
@@ -48,10 +53,10 @@ public class Session extends CocktailAjaxSession {
 	public Session() {
 		super();
 		NSNotificationCenter.defaultCenter().addObserver(this,
-					new NSSelector("registerNewDatabaseChannel", new Class[] {
-							NSNotification.class
-					}),
-					EODatabaseContext.DatabaseChannelNeededNotification, null);
+				new NSSelector("registerNewDatabaseChannel", new Class[] {
+						NSNotification.class
+				}),
+				EODatabaseContext.DatabaseChannelNeededNotification, null);
 		// Initialisation du theme applique a toutes les fenetres gerees via CktlAjaxModalDialog
 		// setWindowsClassName(CktlAjaxModalDialog.WINDOWS_CLASS_NAME_BLUELIGHTING);
 	}
@@ -70,6 +75,9 @@ public class Session extends CocktailAjaxSession {
 
 	public void setApplicationUser(CannelleApplicationUser appUser) {
 		this.applicationUser = appUser;
+
+		initialiseSessionForUser();
+
 	}
 
 	public WOActionResults onQuitter() {
@@ -110,6 +118,24 @@ public class Session extends CocktailAjaxSession {
 	 */
 	public void setMessageErreur(String messageErreur) {
 		this.messageErreur = messageErreur;
+	}
+
+	public void initialiseSessionForUser() {
+		try {
+			Integer nbJours = Integer.valueOf(FwkCktlReport.paramManager.getParamNbJoursHistorique());
+			CktlReportHistoryManagement.cleanHistory(defaultEditingContext(), applicationUser.getPersId(), nbJours);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void awake() {
+		super.awake();
+		if (applicationUser != null) {
+			ERXThreadStorage.takeValueForKey(applicationUser, FwkCktlReportApplicationUser.THREAD_STORAGE_KEY);
+		}
 	}
 
 }

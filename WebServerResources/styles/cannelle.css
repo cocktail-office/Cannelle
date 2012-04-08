@@ -1,4 +1,9 @@
 /* --------------------------------------------------------------------------- */
+.cktl_entete_wrapper_horizontal {
+	  background :#D8863D url(images/cannelle_logo.png) no-repeat scroll left center ;
+	  padding-left: 50px;
+}
+
 table {
 	font-size: 12px;
 }
@@ -9,44 +14,6 @@ input, textarea {
 	font-size: 11px;
 }
 
-/* Classes du wrapper horizontal */
-.cktl_container_principal {
-	width: 98%;
-	margin-left: auto;
-	margin-right: auto;
-	color: black;
-	text-align: center;
-	font-size: 12px;
-	float: inherit;
-}
-
-.cktl_entete_wrapper_horizontal { /*width: 98%;*/
-	height: 30px;
-	position: relative;
-	text-align: left;
-	font-size: 2em;
-	display: block;
-	font-weight: bold;
-	padding: 4px;
-}
-
-.cktl_copyright_wrapper_horizontal { /*width: 98%;*/
-	height: 15px;
-	position: relative;
-	font-size: 8pt;
-	display: block;
-	font-weight: bold;
-}
-
-.cktl_copyright_wrapper_horizontal a {
-	text-decoration: none;
-}
-
-.cktl_accueil_wrapper_horizontal { /*width: 98%;*/
-	text-align: center;
-	margin: 0;
-	font-size: 12px;
-}
 
 .sousTitrePrincipal {
 	font-style: italic;
@@ -172,33 +139,3 @@ input, textarea {
 	font-size: 12px;
 }
 
-/* --------------------------------------------------------------------------- */
-/* Wrapper horizontal bleu */
-/*
-.cktl_container_principal {
-  border: 2px solid #4E80C0;
-}
-
-.cktl_entete_wrapper_horizontal {
-  background-color: #6699CC;
-}
-
-.cktl_copyright_wrapper_horizontal {
-  background-color: #6699CC;
-}
-*/
-/* --------------------------------------------------------------------------- */
-/* Wrapper horizontal vert */
-/*
-.cktl_container_principal {
-  border: 2px solid #4AA329;
-}
-
-.cktl_entete_wrapper_horizontal {
-  background-color: #B1BF82;
-}
-
-.cktl_copyright_wrapper_horizontal {
-  background-color: #B1BF82;
-}
-*/

@@ -61,7 +61,7 @@ public final class Version extends A_CktlVersion {
 	private static final String CKTLWEBAPP_VERSION_MAX = null;
 
 	/** Version de WebObjects */
-	private static final String WO_VERSION_MIN = "5.3.3.0";
+	private static final String WO_VERSION_MIN = "5.4.3.0";
 	private static final String WO_VERSION_MAX = null;
 
 	/** Version du JRE */
@@ -76,7 +76,7 @@ public final class Version extends A_CktlVersion {
 	private static final String WONDER_VERSION_MIN = null;
 	private static final String WONDER_VERSION_MAX = null;
 
-	private static final String FWKCKTLREPORTGUIAJAX_VERSION_MIN = "1.0.0.1";
+	private static final String FWKCKTLREPORTGUIAJAX_VERSION_MIN = "1.2.1.0";
 	private static final String FWKCKTLREPORTGUIAJAX_VERSION_MAX = null;
 
 	//    /** Version de JasperReports */

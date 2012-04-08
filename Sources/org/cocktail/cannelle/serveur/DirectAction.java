@@ -29,7 +29,6 @@ import org.cocktail.cannelle.serveur.components.Login;
 import org.cocktail.cannelle.serveur.components.Timeout;
 import org.cocktail.fwkcktlpersonne.common.metier.IPersonne;
 import org.cocktail.fwkcktlpersonne.common.metier.PersonneDelegate;
-import org.cocktail.fwkcktlreport.server.CktlReportParameters.CktlReportParametersMissingException;
 import org.cocktail.fwkcktlwebapp.common.CktlLog;
 import org.cocktail.fwkcktlwebapp.common.CktlUserInfo;
 import org.cocktail.fwkcktlwebapp.common.database.CktlUserInfoDB;
@@ -204,13 +203,11 @@ public class DirectAction extends CktlWebAction {
 			}
 			else {
 				try {
-					CannelleApplicationUser appUser = new CannelleApplicationUser(session.defaultEditingContext(), Integer.valueOf(loggedUserInfo.persId().intValue()), ((Application) WOApplication.application()).config());
+					CannelleApplicationUser appUser = new CannelleApplicationUser((ERXEC) session.defaultEditingContext(), Application.TYPE_APP_STR, Integer.valueOf(loggedUserInfo.persId().intValue()), ((Application) WOApplication.application()).config());
 
 					// Decommenter la ligne suivante pour valider un utilisateur Jefy_Admin
 					// appUser.checkUtilisateurValide(DateCtrl.now());
 					session.setApplicationUser(appUser);
-				} catch (CktlReportParametersMissingException e) {
-					throw new RuntimeException(e);
 				} catch (Exception e) {
 					e.printStackTrace();
 					messageErreur = "Vous n'ètes pas autorisé(e) à utiliser cette application";

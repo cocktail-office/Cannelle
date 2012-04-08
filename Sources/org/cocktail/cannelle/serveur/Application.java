@@ -25,6 +25,7 @@
 package org.cocktail.cannelle.serveur;
 
 import java.lang.reflect.InvocationTargetException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.TimeZone;
@@ -33,7 +34,7 @@ import java.util.TimerTask;
 
 import org.cocktail.cannelle.serveur.components.Accueil;
 import org.cocktail.fwkcktlajaxwebext.serveur.CocktailAjaxApplication;
-import org.cocktail.fwkcktlreport.server.CktlReportParameters;
+import org.cocktail.fwkcktlreport.server.FwkCktlReportParamManager;
 import org.cocktail.fwkcktlwebapp.common.CktlLog;
 import org.cocktail.fwkcktlwebapp.common.util.DateCtrl;
 import org.cocktail.fwkcktlwebapp.server.CktlMailBus;
@@ -77,14 +78,16 @@ public class Application extends CocktailAjaxApplication {
 	 * pas initialise, il y a une erreur bloquante.
 	 */
 	public static final NSArray<String> MANDATORY_PARAMS = new NSArray(new String[] {
-			"GRHUM_HOST_MAIL", "ADMIN_MAIL", CktlReportParameters.CKTLREPORT_COCKTAIL_REPORTS_LOCATION
+			"GRHUM_HOST_MAIL", "ADMIN_MAIL"
 	});
 
 	/**
 	 * Liste des parametres optionnels (dans fichier de config ou table grhum_parametres). Si un des parametre n'est pas initialise, il y a un
 	 * warning.
 	 */
-	public static final String[] OPTIONAL_PARAMS = new String[] {};
+	public static final String[] OPTIONAL_PARAMS = new String[] {
+			FwkCktlReportParamManager.CKTLREPORT_LOCAL_REPORTS_LOCATION
+	};
 
 	/**
 	 * Mettre a true pour que votre application renvoie les informations de collecte au serveur de collecte de Cocktail.
@@ -111,7 +114,7 @@ public class Application extends CocktailAjaxApplication {
 	/**
 	 * Formatteur de dates.
 	 */
-	public NSTimestampFormatter appDateFormatter;
+	public SimpleDateFormat appDateFormatter;
 
 	/**
 	 * Liste des emails des utilisateurs connectes.
@@ -124,16 +127,9 @@ public class Application extends CocktailAjaxApplication {
 
 	public Application() {
 		super();
-		//setAllowsConcurrentRequestHandling(false);
 		setDefaultRequestHandler(requestHandlerForKey(directActionRequestHandlerKey()));
 		setPageRefreshOnBacktrackEnabled(true);
-		//		WOMessage.setDefaultEncoding("UTF-8");
-		//		WOMessage.setDefaultURLEncoding("UTF-8");
-		//		ERXMessageEncoding.setDefaultEncoding("UTF8");
-		//		ERXMessageEncoding.setDefaultEncodingForAllLanguages("UTF8");
 		utilisateurs = new NSMutableArray();
-		//    	setupDatabaseChannelCloserTimer();
-		//		ERXEC.setDefaultFetchTimestampLag(2000);
 	}
 
 	public void initApplication() {
@@ -156,8 +152,8 @@ public class Application extends CocktailAjaxApplication {
 		//		EODatabaseContext.setDefaultDelegate(this); // A activer si l'application présente des pbs de synchronisation entre snapshots et base de donnees
 		initFormatters();
 		initTimeZones();
-		this.appDateFormatter = new NSTimestampFormatter();
-		this.appDateFormatter.setPattern("%d/%m/%Y");
+		this.appDateFormatter = new SimpleDateFormat("dd/MM/yyyy");
+		//this.appDateFormatter.setPattern("%d/%m/%Y");
 
 		// Prefetch dans le sharedEditingContext des nomenclatures communes a toute l'appli
 		/**

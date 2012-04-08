@@ -30,20 +30,20 @@ package org.cocktail.cannelle.serveur;
  */
 public final class VersionMe extends Object {
 	// Nom de l'appli
-	static final String APPLICATIONFINALNAME = "Cannelle";
+	public static final String APPLICATIONFINALNAME = "Cannelle";
 	public static final String APPLICATIONINTERNALNAME = "Cannelle";
 	public static final String APPLICATION_STRID = "CANNELLE";
 
 	// Version appli
 	public static final long SERIALVERSIONUID = 0102;
 
-	public static final int VERSIONNUMMAJ = 0;
-	public static final int VERSIONNUMMIN = 1;
+	public static final int VERSIONNUMMAJ = 1;
+	public static final int VERSIONNUMMIN = 0;
 	public static final int VERSIONNUMPATCH = 0;
-	public static final int VERSIONNUMBUILD = 2;
+	public static final int VERSIONNUMBUILD = 0;
 	public static final int VERSIONNUMRC = 1;
 
-	public static final String VERSIONDATE = "15/02/2012";
+	public static final String VERSIONDATE = "05/04/2012";
 	public static final String COMMENT = null;
 
 	/***

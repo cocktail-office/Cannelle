@@ -46,7 +46,6 @@ public class Wrapper extends MyWOComponent {
 
 	private String onloadJS;
 	private String erreurScript;
-	private String titre;
 
 	public Wrapper(WOContext context) {
 		super(context);
@@ -130,17 +129,7 @@ public class Wrapper extends MyWOComponent {
 	 * @return the titre
 	 */
 	public String titre() {
-		if (titre == null) {
-			titre = "Cannelle";
-		}
-		return titre;
-	}
-
-	/**
-	 * @param titre the titre to set
-	 */
-	public void setTitre(String titre) {
-		this.titre = titre;
+		return VersionMe.APPLICATIONFINALNAME;
 	}
 
 	public String copyright() {
